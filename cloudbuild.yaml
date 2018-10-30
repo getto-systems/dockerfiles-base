@@ -1,5 +1,9 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
+  args: ['login', '-u', 'getto', '-p', $_DOCKER_HUB_PASSWORD]
+- name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'getto/base:lgi8li28', 'lgi8li28']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'gcr.io/getto/base:lgi8li28']
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'getto/base:lgi8li28']
