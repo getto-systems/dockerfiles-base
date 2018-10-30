@@ -3,9 +3,8 @@ steps:
   args: ['login', '-u', 'getto', '-p', $_DOCKER_HUB_PASSWORD]
 
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'getto/base:lgi8li28',
-           '-t', 'gcr.io/getto/base:lgi8li28', 'lgi8li28']
+  args: ['build', '-t', 'getto/base:lgi8li28', '-t', 'gcr.io/getto-union/getto/base:lgi8li28', 'lgi8li28']
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/getto/base:lgi8li28']
+  args: ['push',  'gcr.io/getto-union/getto/base:lgi8li28']
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push',        'getto/base:lgi8li28']
+  args: ['push',  'getto/base:lgi8li28']
