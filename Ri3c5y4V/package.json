@@ -1,7 +1,5 @@
 {
-  "name": "cathands-sendai-staff",
   "version": "1.2.3",
-  "description": "Cathands-Sendai Staff frontend",
   "scripts": {
     "build": "getto-build",
     "start": "npm run reload & npm run watch",
@@ -14,16 +12,8 @@
     "test": "elm-test"
   },
   "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git@bitbucket.org:getto-systems/cathands-sendai-staff.git"
-  },
   "author": "shun@getto.systems",
   "license": "MIT",
-  "bugs": {
-    "url": "https://bitbucket.org/getto-systems/cathands-sendai-staff"
-  },
-  "homepage": "https://bitbucket.org/getto-systems/cathands-sendai-staff",
   "devDependencies": {
     "elm": "^0.18.0",
     "elm-test": "^0.18.12",
