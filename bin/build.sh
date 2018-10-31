@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo docker login -u getto -p "$_DOCKER_HUB_PASSWORD"
+sudo docker login -u getto -p "$DOCKER_HUB_PASSWORD"
 if [ $? != 0 ]; then
   exit 1
 fi
