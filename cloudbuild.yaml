@@ -1,6 +1,11 @@
 steps:
 
 - name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'getto/base:k2JmDVzT', '-t', 'gcr.io/getto-union/getto/base:k2JmDVzT', 'k2JmDVzT']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push',  'gcr.io/getto-union/getto/base:k2JmDVzT']
+
+- name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'getto/base:lgi8li28', '-t', 'gcr.io/getto-union/getto/base:lgi8li28', 'lgi8li28']
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push',  'gcr.io/getto-union/getto/base:lgi8li28']
@@ -19,6 +24,8 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: ['login', '-u', 'getto', '-p', $_DOCKER_HUB_PASSWORD]
 
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push',  'getto/base:k2JmDVzT']
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push',  'getto/base:lgi8li28']
 - name: 'gcr.io/cloud-builders/docker'
