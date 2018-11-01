@@ -2,7 +2,7 @@ image: buildpack-deps:stretch
 
 deploy:
   only:
-    - master
+    - release@getto-systems-labo/dockerfiles-base
   script:
     - git remote add github https://getto-systems:$GITHUB_ACCESS_TOKEN@github.com/getto-systems/dockerfiles-base.git
     - git push github master

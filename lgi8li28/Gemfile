@@ -23,7 +23,7 @@ gem 'getto-roda', '>= 1.1.0'
 gem 'getto-params', '>= 1.0.0'
 gem 'getto-repository-sequel', '>= 1.0.0'
 
-gem 'monban-core', '>= 1.1.0'
+gem 'monban-core', '>= 1.2.2'
 gem 'monban-repository', '>= 1.1.0'
 
 group :development, :test do
