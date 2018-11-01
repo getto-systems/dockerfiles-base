@@ -1,46 +1,42 @@
-FROM alpine:3.8
+FROM buildpack-deps:bionic
 MAINTAINER shun
 
+ENV RELEASE_NAME=bionic
 ENV DOCKER_VERSION 17.12.0-ce
 
-RUN apk add --update \
-      coreutils \
-      curl \
-      openssh-client \
-      git \
-      less \
-      grep \
+RUN set -x && \
+    apt-get update && \
+    apt-get install -y \
       sudo \
-      shadow \
-      tzdata \
+      software-properties-common \
+      bash-completion \
+      locales \
+      locales-all \
+      language-pack-en \
+      language-pack-en-base \
+      language-pack-ja \
+      language-pack-ja-base \
+      man \
+      manpages-dev \
+      silversearcher-ag \
       tmux \
-      bash \
+      less \
       zsh \
-      perl \
       neovim \
-      the_silver_searcher \
-      python3 \
-      py3-pip \
-      gcc \
-      python3-dev \
-      musl-dev \
     && \
-    pip3 install neovim && \
-    apk del \
-      py3-pip \
-      gcc \
-      python3-dev \
-      musl-dev \
-    && \
-    addgroup -S sudo && \
     echo '%sudo  ALL=(ALL:ALL) NOPASSWD: ALL' >> /etc/sudoers && \
-    curl https://download.docker.com/linux/static/stable/x86_64/docker-$DOCKER_VERSION.tgz --output /tmp/docker.tgz && \
-    tar -xzf /tmp/docker.tgz -C /tmp && \
-    mv /tmp/docker/docker /usr/local/bin && \
-    rm -rf /tmp/docker* && \
+    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add - && \
+    add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $RELEASE_NAME edge" && \
+    apt-add-repository ppa:fish-shell/release-2 && \
+    apt-get update && \
+    apt-get install -y \
+      docker-ce \
+      fish \
+    && \
+    apt-get clean && \
     :
 
 COPY entrypoint.sh /usr/local/bin
 
 ENTRYPOINT ["entrypoint.sh"]
-CMD ["/bin/zsh"]
+CMD ["/usr/bin/fish"]
