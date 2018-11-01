@@ -65,7 +65,7 @@ GEM
     mini_mime (1.0.1)
     mini_portile2 (2.3.0)
     minitest (5.11.3)
-    monban-core (1.1.0)
+    monban-core (1.2.2)
       getto-initialize_with (~> 1.0)
       getto-params (~> 1.0)
       jwt (~> 2.1)
@@ -113,7 +113,7 @@ DEPENDENCIES
   getto-repository-sequel (>= 1.0.0)
   getto-roda (>= 1.1.0)
   minitest
-  monban-core (>= 1.1.0)
+  monban-core (>= 1.2.2)
   monban-repository (>= 1.1.0)
   mysql2 (>= 0.4.4, < 0.6.0)
   pry
