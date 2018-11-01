@@ -4,6 +4,7 @@ MAINTAINER shun
 ENV DOCKER_VERSION 17.12.0-ce
 
 RUN apk add --update \
+      coreutils \
       curl \
       openssh-client \
       git \
