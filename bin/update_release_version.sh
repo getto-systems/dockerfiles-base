@@ -15,8 +15,8 @@ update_release_version(){
   git add $file
 
 
-  git config user.email "update@getto.systems"
-  git config user.name  "update@getto.systems"
+  git config user.email "admin@getto.systems"
+  git config user.name  "admin@getto.systems"
   git commit -m "update release-version"
 }
 
