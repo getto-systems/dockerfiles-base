@@ -21,7 +21,6 @@ RUN set -x && \
       silversearcher-ag \
       tmux \
       less \
-      zsh \
       neovim \
     && \
     echo '%sudo  ALL=(ALL:ALL) NOPASSWD: ALL' >> /etc/sudoers && \
