@@ -1,3 +1,7 @@
+# Version : 1.6.1
+
+release
+
 # Version : 1.6.0
 
 add: s3cmd
