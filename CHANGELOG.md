@@ -1,3 +1,7 @@
+# Version : 1.5.0
+
+fix: entry_point
+
 # Version : 1.4.0
 
 update image
