@@ -1,3 +1,7 @@
+# Version : 1.5.1
+
+fix: default shell
+
 # Version : 1.5.0
 
 fix: entry_point
