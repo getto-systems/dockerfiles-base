@@ -1,3 +1,7 @@
+# Version : 1.6.0
+
+add: s3cmd
+
 # Version : 1.5.1
 
 fix: default shell
