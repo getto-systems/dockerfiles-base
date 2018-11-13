@@ -1,3 +1,7 @@
+# Version : 1.9.0
+
+update: gem
+
 # Version : 1.8.0
 
 update: gem
