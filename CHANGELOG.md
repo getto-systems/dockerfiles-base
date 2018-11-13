@@ -1,3 +1,7 @@
+# Version : 1.7.0
+
+update: gem
+
 # Version : 1.6.1
 
 release
