@@ -1,3 +1,7 @@
+# Version : 1.11.0
+
+update: node
+
 # Version : 1.10.1
 
 fix: timeout
