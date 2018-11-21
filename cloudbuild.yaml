@@ -30,6 +30,11 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push',  'gcr.io/getto-union/getto/base:npkwIQDm']
 
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'getto/base:t4JIsmOx', '-t', 'gcr.io/getto-union/getto/base:t4JIsmOx', 't4JIsmOx']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push',  'gcr.io/getto-union/getto/base:t4JIsmOx']
+
 
 - name: 'gcr.io/cloud-builders/docker'
   args: ['login', '-u', 'getto', '-p', $_DOCKER_HUB_PASSWORD]
@@ -46,5 +51,7 @@ steps:
   args: ['push',  'getto/base:7WcItF2l']
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push',  'getto/base:npkwIQDm']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push',  'getto/base:t4JIsmOx']
 
 timeout: 3600s
