@@ -46,3 +46,5 @@ steps:
   args: ['push',  'getto/base:7WcItF2l']
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push',  'getto/base:npkwIQDm']
+
+timeout: 3600s
