@@ -1,0 +1,24 @@
+{
+  "version": "2.3.0",
+  "scripts": {
+    "build": "getto-build",
+    "start": "npm run reload & npm run watch",
+    "reload": "reload-wrapper -d ./public -w ./public/dist/_app",
+    "watch": "npm run watch:compile & npm run watch:make & npm run watch:routes",
+    "watch:routes": "getto-watch-routes",
+    "watch:make": "getto-watch-make",
+    "watch:compile": "getto-watch-compile",
+    "elm-install": "elm-install",
+    "test": "elm-test"
+  },
+  "main": "index.js",
+  "author": "shun@getto.systems",
+  "license": "MIT",
+  "devDependencies": {
+    "elm": "^0.18.0",
+    "elm-test": "^0.18.12",
+    "getto-detect": "^0.1.0",
+    "getto-elm_tools": "^0.2.8",
+    "reload-wrapper": "^0.1.1"
+  }
+}
