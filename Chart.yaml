@@ -1,6 +1,0 @@
-apiVersion: v1
-name: getto/base
-version: 1.9.0
-maintainers:
-  - name: shun.fix9
-    email: shun@getto.systems
