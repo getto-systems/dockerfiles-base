@@ -34,6 +34,8 @@ steps:
   args: ['build', '-t', 'getto/base:t4JIsmOx', '-t', 'gcr.io/getto-union/getto/base:t4JIsmOx', 't4JIsmOx']
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push',  'gcr.io/getto-union/getto/base:t4JIsmOx']
+
+- name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'getto/base:6m3CGcil', '-t', 'gcr.io/getto-union/getto/base:6m3CGcil', '6m3CGcil']
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push',  'gcr.io/getto-union/getto/base:6m3CGcil']
