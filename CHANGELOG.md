@@ -1,3 +1,7 @@
+# Version : 1.13.2
+
+fix: package.json
+
 # Version : 1.13.1
 
 fix: cloudbuild
