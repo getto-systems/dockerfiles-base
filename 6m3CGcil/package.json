@@ -4,8 +4,8 @@
   "description": "6m3CGcil",
   "scripts": {
     "build": "getto-build",
-    "livereload": "npm run reload & npm run watch",
-    "reload": "reload -d ./public -w ./public/dist -p 8000",
+    "start": "npm run reload & npm run watch",
+    "reload": "reload-wrapper -d ./public -w ./public/dist",
     "watch": "npm run watch:compile & npm run watch:make & npm run watch:routes",
     "watch:routes": "getto-watch-routes",
     "watch:make": "getto-watch-make",
@@ -19,6 +19,7 @@
   "devDependencies": {
     "elm": "^0.18.0",
     "elm-test": "^0.18.12",
-    "getto-elm_tools": "^0.0.10"
+    "getto-elm_tools": "^0.0.10",
+    "reload-wrapper": "^0.1.1"
   }
 }
