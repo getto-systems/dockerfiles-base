@@ -4,7 +4,7 @@
     "repository": "https://github.com/user/project.git",
     "license": "BSD3",
     "source-directories": [
-        "elm-stuff/packages/getto-systems/getto-elm-ports/0.0.12/src",
+        "elm-stuff/packages/getto-systems/getto-elm-ports/0.0.13/src",
         "src",
         "config",
         "i18n/ja",
@@ -12,7 +12,7 @@
     ],
     "exposed-modules": [],
     "dependencies": {
-        "getto-systems/getto-elm-ports": "0.0.12 <= v < 0.0.13",
+        "getto-systems/getto-elm-ports": "0.0.13 <= v < 0.0.14",
         "elm-community/json-extra": "2.7.0 <= v < 2.7.1",
         "elm-community/list-extra": "7.1.0 <= v < 7.1.1",
         "elm-lang/core": "5.1.1 <= v < 5.1.2",
