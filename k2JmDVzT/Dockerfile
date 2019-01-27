@@ -1,8 +1,7 @@
-FROM buildpack-deps:bionic
+FROM buildpack-deps:cosmic
 MAINTAINER shun
 
-ENV RELEASE_NAME=bionic
-ENV DOCKER_VERSION 17.12.0-ce
+ENV RELEASE_NAME=cosmic
 
 RUN set -x && \
     apt-get update && \
@@ -18,18 +17,16 @@ RUN set -x && \
       language-pack-ja-base \
       man \
       manpages-dev \
-      silversearcher-ag \
+      ripgrep \
       tmux \
       less \
-      neovim \
+      vim \
     && \
     echo '%sudo  ALL=(ALL:ALL) NOPASSWD: ALL' >> /etc/sudoers && \
-    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add - && \
-    add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $RELEASE_NAME edge" && \
-    apt-add-repository ppa:fish-shell/release-2 && \
+    curl -fsSL https://get.docker.com | sudo sh && \
+    apt-add-repository ppa:fish-shell/release-3 && \
     apt-get update && \
     apt-get install -y \
-      docker-ce \
       fish \
     && \
     apt-get clean && \
