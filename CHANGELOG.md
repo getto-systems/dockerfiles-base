@@ -1,3 +1,7 @@
+# Version : 1.19.0
+
+remove: package-lock.json
+
 # Version : 1.18.0
 
 update: k2JmDVzT
