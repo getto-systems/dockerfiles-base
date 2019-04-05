@@ -3,7 +3,6 @@ MAINTAINER shun
 
 ENV LABO_USER laboratory
 ENV BUILD_LABO_USER $LABO_USER
-ENV LABO_DOCKER_HOME /usr/local/docker
 
 RUN set -x && \
     apt-get update && \
@@ -31,16 +30,9 @@ RUN set -x && \
       fish \
     && \
     apt-get clean && \
-    groupadd -g 233 docker && \
+    curl -sSL https://get.docker.com | sh && \
     useradd $LABO_USER -s /bin/bash && \
-    mkdir -p $LABO_DOCKER_HOME && \
-    chown $LABO_USER:$LABO_USER $LABO_DOCKER_HOME && \
     :
-
-USER $LABO_USER
-RUN curl -sSL https://get.docker.com/rootless | SKIP_IPTABLES=1 HOME=$LABO_DOCKER_HOME sh
-
-USER root
 
 COPY entrypoint.sh /usr/local/bin
 
