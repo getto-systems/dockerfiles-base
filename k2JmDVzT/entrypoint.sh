@@ -1,8 +1,6 @@
 #!/bin/bash
 
-: ${LABO_USER:=labo}
-
-useradd $LABO_USER -s /bin/bash && \
-  usermod -aG sudo $LABO_USER
+groupmod -n $LABO_USER $BUILD_LABO_USER
+usermod -l $LABO_USER -d /home/$LABO_USER -g $LABO_USER -G $LABO_USER,sudo,docker $BUILD_LABO_USER
 
 exec sudo -E -H -u $LABO_USER "$@"
