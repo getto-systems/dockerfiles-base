@@ -1,3 +1,7 @@
+# Version : 1.20.0
+
+fix: labo - rootless docker
+
 # Version : 1.19.0
 
 remove: package-lock.json
