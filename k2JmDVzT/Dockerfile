@@ -31,6 +31,7 @@ RUN set -x && \
     && \
     apt-get clean && \
     curl -sSL https://get.docker.com | sh && \
+    groupmod -g 233 docker && \
     useradd $LABO_USER -s /bin/bash && \
     :
 
